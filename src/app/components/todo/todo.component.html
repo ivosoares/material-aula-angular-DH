@@ -1,0 +1,13 @@
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">Todo List</div>
+    <div class="card-body">
+      <input type="text" #todo class="form-control" (keyup.enter)="addTodo(todo.value); todo.value = ''">
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let item of items;">
+        <app-todo-item [data]="item" (remove)="removeTodo($event)"></app-todo-item>
+      </li>
+    </ul>
+  </div>
+</div>

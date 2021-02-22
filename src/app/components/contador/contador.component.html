@@ -1,0 +1,28 @@
+<div [ngStyle]="{background: count < 4 ? 'red' : 'green'}" [ngClass]="{custom: count > 5}">
+  <p>O contador é: {{ count }}</p>
+</div>
+
+<p *ngIf="count > 5; else menor">O contador passou de 5!</p>
+
+<ng-template #menor>
+  <p>O contador é menor que 5</p>
+</ng-template>
+
+<button (click)="clicou()" class="btn btn-info">Clique Aqui!</button>
+
+<div [ngSwitch]="count" class="col-6">
+  <div *ngSwitchCase="3">É igual a 3</div>
+  <div *ngSwitchCase="5">É igual a 5</div>
+  <div *ngSwitchCase="8">É igual a 8</div>
+  <div *ngSwitchDefault>Eu sou o default!</div>
+</div>
+
+
+<input type="text" [(ngModel)]="text">
+
+<p>O texto é {{ text }}</p>
+
+
+<ul>
+  <li *ngFor="let p of pessoas">O nome da pessoa é {{ p.nome }}  {{p.sobrenome}}</li>
+</ul>
