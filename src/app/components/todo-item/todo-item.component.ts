@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TodoItemComponent implements OnInit {
   @Input() data;
   @Output() remove = new EventEmitter();
+  done = false;
 
   constructor() { }
 
@@ -18,4 +19,7 @@ export class TodoItemComponent implements OnInit {
     this.remove.emit(this.data);
   }
 
+  markAsDone() {
+    this.done = true;
+  }
 }

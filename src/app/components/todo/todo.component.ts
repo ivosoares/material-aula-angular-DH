@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/todo.model';
 
 @Component({
   selector: 'app-todo',
@@ -6,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  items =  ['tarefa 1', 'tarefa 2']
+  items: Array<Todo> = [];
 
-  constructor() { }
+  constructor() {
+    let todos = JSON.parse(localStorage.getItem('todos'));
+    if(!todos) {
+      this.items = [];
+    }else {
+      this.items = todos;
+    }
+  }
 
   ngOnInit(): void {
   }
 
-  addTodo(todo: string) {
-    console.log(todo);
-    this.items.push(todo);
+  addTodo(title: string) {
+    const id = this.items.length + 1;
+    this.items.push(new Todo(id, title, false));
+    localStorage.setItem('todos', JSON.stringify(this.items));
     console.log(this.items);
   }
 
@@ -23,6 +32,7 @@ export class TodoComponent implements OnInit {
     console.log('O ELEMENTO PAI RECEBEU -', event);
     let indice = this.items.indexOf(event);
     this.items.splice(indice, 1);
+    localStorage.setItem('todos', JSON.stringify(this.items));
   }
 
 }
