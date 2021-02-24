@@ -6,6 +6,20 @@
       "sobrenome": "Soares",
       "idade": 25,
       "profissao": "professor"
+    },
+    {
+      "nome": "Joao",
+      "sobrenome": "da Silva",
+      "idade": 35,
+      "profissao": "Pintor",
+      "id": 2
+    },
+    {
+      "nome": "Leonardo",
+      "sobrenome": "Oliveira",
+      "idade": 35,
+      "profissao": "Gerente de T.I",
+      "id": 3
     }
   ]
 }
