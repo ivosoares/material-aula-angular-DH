@@ -1,0 +1,26 @@
+<section class="mt-5 mb-5">
+  <h1>Listagem de usuarios</h1>
+  <a class="btn btn-info mb-3 float-right" routerLink="/users/form">Cadastrar Novo</a>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Profissao</th>
+        <th scope="col" colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{ user.id }}</th>
+        <td>{{ user.nome }}</td>
+        <td>{{ user.idade }}</td>
+        <td>{{ user.profissao }}</td>
+        <td><button class="btn btn-success">Editar</button></td>
+        <td><button class="btn btn-danger" (click)="deleteUser(user.id)">Excluir</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
