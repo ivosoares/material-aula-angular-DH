@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     TodoItemComponent,
     HeaderComponent,
     UserComponent,
-    UserFormComponent
+    UserFormComponent,
+    ChatComponent
   ],
   imports: [
     FormsModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './components/chat/chat.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
       component: UserFormComponent
     }
   ]},
+  {path: 'chat', component: ChatComponent},
 ];
 
 @NgModule({
