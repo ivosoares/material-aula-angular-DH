@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { TodoComponent } from './components/todo/todo.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
     }
   ]},
   {path: 'chat', component: ChatComponent},
+  {path: 'about', component: AboutComponent},
 ];
 
 @NgModule({

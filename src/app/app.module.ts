@@ -12,6 +12,7 @@ import { UserComponent } from './components/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChatComponent } from './components/chat/chat.component';
     HeaderComponent,
     UserComponent,
     UserFormComponent,
-    ChatComponent
+    ChatComponent,
+    AboutComponent
   ],
   imports: [
     FormsModule,
